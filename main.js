@@ -14,6 +14,16 @@ showCountries.addEventListener("click", () => {
       const countries = JSON.parse(this.response);
       console.log("Success");
       console.log(countries);
+      countries.forEach((country) => {
+        const countryCard = document.createElement("div");
+        const countryCardImage = document.createElement("img");
+        countryCard.innerHTML = country.name.common;
+        countryCardImage.src = country.flags.svg;
+        countryCard.className = "country-card";
+        countryCardImage.width = "150";
+        document.querySelector(".feed").appendChild(countryCard);
+        document.querySelector(".feed").appendChild(countryCardImage);
+      });
     }
   };
 

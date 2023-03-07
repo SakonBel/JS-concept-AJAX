@@ -1,0 +1,11 @@
+img {
+  margin-bottom: 30px;
+}
+
+.feed {
+  display: grid;
+}
+
+.country-card {
+  width: 150px;
+}
